@@ -1,61 +1,90 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import { ORANGE_PRIMARY } from '../../constants';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: left;
   margin-right: auto;
   color: white;
   font-weight: 400;
-  padding: 60px 0 20px 0;
-  border-bottom: 1px solid rgba(225, 225, 225, .3);
+  margin: 0;
+  min-height: 200px;
+  padding: 35px 0 35px 35px;
+  overflow: hidden auto;
+  ${media.lessThan('768px')`
+    padding: 35px 0 35px 20px;
+  `}
 `;
 
-export const Heading = styled.p`
-  max-width: 85%;
-  font-size:calc(12px + .5vw);
-  color: white;
-  letter-spacing: 2px;
-  font-weight: 300;
-  margin-bottom: 15px;
-  ${media.lessThan('600px')`
-    display: none;
+export const HeaderContainer = styled.div`
+  position: relative;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+`;
+
+export const Header = styled.p`
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  line-height: 1.1em;
+  letter-spacing: .4rem;
+  font-size: 21px;
+  white-space: nowrap;
+  color: ${ORANGE_PRIMARY};
+  ${media.lessThan('768px')`
+    font-size: 18px;
+    letter-spacing: .3rem;
   `}
 `;
 
 export const Text = styled.p`
-  max-width: 85%;
-  display: ${props => props.isFlex ? 'flex': 'unset'};
-  margin-top: ${props => props.pushDown ? '18px' : '5px;'};
-  font-size:calc(14px + .1vw);
-  line-height: 1.2rem;
-  color: white;
-  letter-spacing: 1px;
-  font-weight: 300;
-  margin-left: 25px;
-  padding-bottom: ${props => props.paddingBottom ? '50px' : '0'};
-  &:nth-child(3) {
-    margin-top: 12px;
-  }
-  ${media.lessThan('600px')`
-    max-width: 80%;
-    text-align: center;
-    margin: 2rem auto 0 auto;
+  position: relative;
+  padding: 0;
+  line-height: 1.3rem;
+  font-size: ${props => props.isFirst ? '18px;' : '16px;'};
+  margin: 12px 0 5px 0;
+  max-width: 90%;
+`;
+
+export const BlueHighlight = styled.p`
+  position: relative;
+  padding: 0;
+  line-height: 2rem;
+  font-size: 24px;
+  max-width: 850px;
+  color: #5DB7F2;
+  color: #9AD1F5;
+  font-weight: 400;
+  margin: 5px 0 5px 0;
+  ${media.lessThan('768px')`
+    font-size: 21px;
+    max-width: 90%;
+    line-height: 1.8rem;
   `}
 `;
 
 export const Highlight = styled.a`
-  color: #fd845c;
-  font-weight: 400;
-  cursor: pointer;
+  color: ${props => props.isBlue ? '#CDE5F5' : '#FD845C' };
   text-decoration: none;
+  outline: none;
+  cursor: pointer;
 `;
 
-export const Line = styled.span`
+export const Line = styled.div`
   height: 1px;
-  width: 90%;
-  margin: 25px 0 20px 0;
-  margin-left: ${props => props.pullLeft ? '55px' : '25px'};
-  background-color: rgba(225, 225, 225, .3);
+  margin: ${props => props.isHeader ? '0px 20px 20px 0' : '25px 0 20px 0'};
+  width: ${props => props.isHeader ? '420px': '80%'};
+  margin-left: ${props => props.pullLeft ? '30px' : '0'};
+  background-color: rgba(225, 225, 225, .2);
+  ${media.lessThan('768px')`
+    width: ${props => props.isHeader ? '90%': '90%'};
+    max-width: ${props => props.isHeader ? '400px': 'none'};
+    text-align: left;
+  `}
 `;

@@ -1,4 +1,5 @@
 import React from 'react';
+import Favicon from 'react-favicon';
 import Landing from './components/Landing/Landing';
 import withAnimation from './containers/withAnimation';
 import GlobalStyles, { AppContainer } from './App.style.js';
@@ -7,16 +8,19 @@ import ContentContainer from './containers/ContentContainer';
 
 /* 
 *
-* Use HOC to inject animation state 
+* 
+* Enhance components that need animation state via withAnimation HOC
 *
 **/
-const EnhancedContainers = withAnimation(NavbarContainer, ContentContainer);
+
+const EnhancedWithAnimation = withAnimation(NavbarContainer, ContentContainer);
 
 const App = () => (
   <AppContainer>
+    <Favicon url='favicon/favicon.ico' />
     <GlobalStyles />
+    <EnhancedWithAnimation />
     <Landing />
-    <EnhancedContainers />
   </AppContainer>
 );
 

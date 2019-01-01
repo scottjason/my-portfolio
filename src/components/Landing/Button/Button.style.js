@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { ORANGE_PRIMARY } from '../../../constants';
+import { ORANGE_PRIMARY, BREAKPOINT_SIZES } from '../../../constants';
+const { portrait } = BREAKPOINT_SIZES;
 
 export const Btn = styled.button`
   position: absolute;
@@ -16,14 +17,13 @@ export const Btn = styled.button`
   outline-color: transparent;
   outline-style: none;
   cursor: pointer;
+  min-width: 250px;
   color: rgba(225, 225, 225, .95);
   transition: all 150ms ease-in-out;
-  ${media.lessThan('medium')`
+  ${media.lessThan(portrait.medium)`
+    width: 70%;
     padding: 15px;
-  `}
-  ${media.lessThan('600px')`
-    width: 60%;
-    margin: 30px auto 0 auto;
+    margin: 10px auto 0 auto;
     left: 0;
     right: 0;
   `}

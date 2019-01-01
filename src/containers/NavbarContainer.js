@@ -1,20 +1,15 @@
-/* eslint-disable no-unused-vars */
-
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Navbar from '../components/Navbar/Navbar';
-import { debounce } from 'debounce';
 import { SOCIAL_DATA, NAVBAR_DATA } from '../constants';
 
 class NavbarContainer extends Component {
   static defaultProps = {
     social: SOCIAL_DATA,
     navbar: NAVBAR_DATA,
-  }
-  openLink = url => {
+  };
+  openLink = ({ url }) => {
     window.open(url, '_blank');
-  }
-  onClickIcon = url => {
-    this.props.openLink(url);
   }
   isMatch(tab) {
     return this.props.tabSelected &&
@@ -33,16 +28,34 @@ class NavbarContainer extends Component {
     });
   }
   render() {
-    console.log('*** NavbarContainer', this.props)
+    const { social, onClickTab, isMobileNavInView, isOverlayInView, isMobileNavAnimating, onToggleMobileNav, shouldRenderBackdrop } = this.props;
     return(
       <Navbar
-        tabs={this.generateTabs()}
-        social={this.props.social}
+        {...this.state}
         openLink={this.openLink}
-        onClickTab={this.props.onClickTab}
+        tabs={this.generateTabs()}
+        social={social}
+        onClickTab={onClickTab}
+        isOverlayInView={isOverlayInView}
+        isMobileNavInView={isMobileNavInView}
+        isMobileNavAnimating={isMobileNavAnimating}
+        onToggleMobileNav={onToggleMobileNav}
+        shouldRenderBackdrop={shouldRenderBackdrop}
       />
     )
   }
 }
+
+NavbarContainer.propTypes = {
+  social: PropTypes.array.isRequired,
+  navbar: PropTypes.array.isRequired,
+  onClickTab: PropTypes.func.isRequired,
+  isOverlayInView: PropTypes.bool.isRequired,
+  isMobileNavInView: PropTypes.bool.isRequired,
+  isOverlayAnimating: PropTypes.bool.isRequired,
+  isMobileNavAnimating: PropTypes.bool.isRequired,
+  onToggleMobileNav: PropTypes.func.isRequired,
+  shouldRenderBackdrop: PropTypes.bool.isRequired,
+};
 
 export default NavbarContainer;
