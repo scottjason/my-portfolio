@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Job from './Job/Job';
+import Work from './Work/Work';
 import Project from './Project/Project';
 import Icon from '../Icon/Icon';
 import { ChevronRight } from 'styled-icons/boxicons-regular';

@@ -10,7 +10,7 @@ export const Container = styled.article`
   line-height: 1.2rem;
   color: white;
   letter-spacing: 1px;
-  max-width: 90%;
+  max-width: 70%;
   &:last-child {
     padding-bottom: 25px;
   }
@@ -26,17 +26,18 @@ export const Role = styled.p`
   font-weight: 400;
   line-height: 1.2rem;
   margin-top: 2px;
+  color: #9AD1F5;
 `;
 
 export const Img = styled.img`
   position: relative;
-  width: 80%;
+  align-self: flex-start;
   margin-top: 10px;
-  left: -5px;
   min-width: 300px;
   max-width: 800px;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: ${props => props.isDashboardImg ? '650px' : 'unset'};
 `;
 
 export const Header = styled.h2`
@@ -58,17 +59,21 @@ export const Subtext = styled.p`
   font-size: 14px;
   margin-top: 2px;
   color: ${ORANGE_PRIMARY};
+  color: white;
   cursor: ${props => props.isLink ? 'pointer' : 'normal'};
 `;
 
 export const Summary = styled.p`
   font-size: 18px;
   color: white;
-  margin-top: 2px;
+  margin-top: 1px;
   color: #9AD1F5;
 `;
 
-
+export const Stack = styled.p`
+  font-size: 16px;
+  color: ${ORANGE_PRIMARY};
+`;
 
 export const Description = styled.p`
   position: relative;
@@ -81,7 +86,7 @@ export const Description = styled.p`
 
 export const Line = styled.div`
   height: 1px;
-  width: 50%;
-  margin: 15px 0;
+  width: 75%;
+  margin: ${props => props.isSection ? '45px 0' : '15px 0'};
   background-color: rgba(225, 225, 225, .2);
 `;

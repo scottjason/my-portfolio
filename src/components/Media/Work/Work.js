@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Header, Subtext, Role, Description, Span } from './Job.style';
+import { Container, Header, Subtext, Role, Description, Span } from './Work.style';
 
-const Job = () => {
+const Work = () => {
   return(
     <Container>
       <Header>Oak Labs</Header>
@@ -24,4 +24,4 @@ const Job = () => {
   )
 }
 
-export default Job;
+export default Work;
