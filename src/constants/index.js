@@ -50,7 +50,7 @@ export const BREAKPOINT_SIZES = {
 export const NAVBAR_DATA = [
   { displayName: 'about', method: 'onClickTab', componentName: 'About'},
   { displayName: 'experience', method: 'onClickTab', componentName: 'Experience'},
-  { displayName: 'media', method: 'onClickTab', componentName: 'Media'},
+  // { displayName: 'media', method: 'onClickTab', componentName: 'Media'},
   { displayName: 'resume', method: 'openLink', url: RESUME_URL},
   { displayName: 'contact', method: 'openLink', url: CONTACT_URL},
 ];
