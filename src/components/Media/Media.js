@@ -9,7 +9,6 @@ import { Container, HeaderContainer, Header, Slash, LineSlider } from './Media.s
 const Media = props => {
   const { mediaSelected, onToggleMedia } = props;
   const isProject = mediaSelected === 'project';
-  console.log('mediaSelected', mediaSelected)
   const getIconStyle = () => {
     return {
       width: '28px',

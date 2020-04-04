@@ -10,7 +10,7 @@ import { Mail } from 'styled-icons/feather';
 */
 
 /* Links */
-const RESUME_URL = 'https://s3-us-west-1.amazonaws.com/sj-portfolio/Scott-Jason-Resume-2019a.pdf';
+const RESUME_URL = 'https://sj-portfolio.s3-us-west-1.amazonaws.com/Scott+Jason+Resume+2020b.pdf';
 const CONTACT_URL = 'mailto:scottleejason@gmail.com?subject=Hi Scott, reaching out from your portfolio site';
 
 /* Colors */
@@ -119,17 +119,31 @@ export const SOCIAL_DATA = [
 
 export const EXPERIENCE_DATA = [
  {
+    company: 'Gap',
+    location: 'San Francisco, CA',
+    website: 'https://www.gap.com',
+    slogan: 'For every generation there\'s a Gap',
+    role: 'Senior Software Engineer, Frontend Focus',
+    startedAt: 'February 2019',
+    endedAt: 'Present',
+    stack: 'React, Redux, Node, Jest, Enzyme, Testcafe, Jenkins, Pivotal Cloud Foundry',
+    description: [
+      'Helping the effort in Gap’s transition to micro frontends built with React, Redux and Node as well as a new, more polished looking UI/UX. I work on the architecture of both React and Node as well as build features and perform code reviews. I also build Jenkins pipelines and work with PCF.',
+      'Write unit, integration and end to end tests that run in a Jenkins CI/CD pipeline and coordinate with multiple teams as well as help drive the effort in managing tasks and completing sprints in an Agile Environment.'
+    ]
+  },
+ {
     company: 'throtl - freelance',
     location: 'Remote',
     website: 'https://www.throtl.com',
     slogan: 'The one-stop-shop for auto enthusiasts',
     role: 'Senior Frontend Engineer',
     startedAt: 'November 2018',
-    endedAt: 'Present',
+    endedAt: 'February 2019',
     stack: 'Ruby on Rails, Angular',
     description: [
-      'Collaborating with some very talented designers to revamp from the ground up the UI / UX / JS architecture. The first project\'s goal was to help give the brand a more polished presence to enable more user signups.',
-      'The company has since seen a 650% jump in new user signups.',
+      'Collaborated with some very talented designers to revamp from the ground up the UI / UX / JS architecture. The first project\'s goal was to help give the brand a more polished presence to enable more user sign-ups.',
+      'The company has since seen a 650% jump in customer growth.',
     ]
   },
   {
