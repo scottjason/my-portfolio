@@ -6,8 +6,9 @@ import GlobalStyles, { AppContainer } from './App.style.js';
 import NavbarContainer from './containers/NavbarContainer';
 import ContentContainer from './containers/ContentContainer';
 
+const faviconUrl = 'favicon/favicon.ico';
+
 /* 
-*
 * 
 * Enhance components that need animation state via withAnimation HOC
 *
@@ -17,7 +18,7 @@ const EnhancedWithAnimation = withAnimation(NavbarContainer, ContentContainer);
 
 const App = () => (
   <AppContainer>
-    <Favicon url='favicon/favicon.ico' />
+    <Favicon url={faviconUrl} />
     <GlobalStyles />
     <EnhancedWithAnimation />
     <Landing />

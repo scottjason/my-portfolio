@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ORANGE_PRIMARY } from '../../../constants';
 
-export const Container = styled.article`
+export const Container = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,18 +15,11 @@ export const Container = styled.article`
     padding-bottom: 25px;
   }
 `;
-export const Role = styled.p`
-  margin: 0;
-  padding: 0;
-  color: #9AD1F5;
-  color: white;
-  text-transform: uppercase;
-  font-size: 16px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  line-height: 1.2rem;
-  margin-top: 2px;
-  color: #9AD1F5;
+
+export const Project = styled.article`
+  position: relative;
+  width: 100%;
+  height: auto;
 `;
 
 export const Img = styled.img`
@@ -40,7 +33,7 @@ export const Img = styled.img`
   max-height: ${props => props.isDashboardImg ? '650px' : 'unset'};
 `;
 
-export const Header = styled.h2`
+export const Header = styled.h1`
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -54,13 +47,27 @@ export const Header = styled.h2`
   }
 `;
 
-export const Subtext = styled.p`
+export const Subtext = styled.h2`
   padding: 0;
   font-size: 14px;
   margin-top: 2px;
   color: ${ORANGE_PRIMARY};
   color: white;
   cursor: ${props => props.isLink ? 'pointer' : 'normal'};
+`;
+
+export const Role = styled.p`
+  margin: 0;
+  padding: 0;
+  color: #9AD1F5;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin-top: 2px;
+  color: #9AD1F5;
 `;
 
 export const Summary = styled.p`

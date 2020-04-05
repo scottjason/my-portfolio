@@ -7,7 +7,6 @@ const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
   html {
     scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
   }
   body {
     margin: 0;
