@@ -1,22 +1,32 @@
 import styled from 'styled-components';
-import { ORANGE_PRIMARY } from '../../../constants';
+import media from 'styled-media-query';
+import { ORANGE_PRIMARY } from '../../data';
 
-export const Container = styled.section`
-  position: relative;
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  flex-shrink: 0;
-  line-height: 1.2rem;
+  margin-right: auto;
   color: white;
-  letter-spacing: 1px;
-  max-width: 70%;
-  &:last-child {
-    padding-bottom: 25px;
-  }
+  font-weight: 400;
+  padding: 35px 0 50px 35px;
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+  ${media.lessThan('768px')`
+    padding: 35px 0 50px 20px;
+  `}
 `;
 
-export const Project = styled.article`
+export const HeaderContainer = styled.div`
+  position: relative;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+`;
+
+export const InnerWrap = styled.article`
   position: relative;
   width: 100%;
   height: auto;
@@ -26,26 +36,28 @@ export const Img = styled.img`
   position: relative;
   align-self: flex-start;
   margin-top: 10px;
-  min-width: 300px;
-  max-width: 800px;
+  min-width: 280px;
+  max-width: 1440px;
+  width: 100%;
   height: auto;
   object-fit: contain;
-  max-height: ${props => props.isDashboardImg ? '650px' : 'unset'};
 `;
 
-export const Header = styled.h1`
+export const Header = styled.p`
   font-weight: 400;
-  margin: 0;
   padding: 0;
-  color: #5DB7F2;
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  line-height: 1.2rem;
-  &:first-child {
-    margin-top: 30px;
-  }
+  margin: 0;
+  line-height: 1.1em;
+  letter-spacing: .4rem;
+  font-size: 21px;
+  white-space: nowrap;
+  color: ${ORANGE_PRIMARY};
+  ${media.lessThan('768px')`
+    font-size: 18px;
+    letter-spacing: .3rem;
+  `}
 `;
+
 
 export const Subtext = styled.h2`
   padding: 0;
@@ -90,10 +102,14 @@ export const Description = styled.p`
   margin: ${props => props.key === 0 ? '12px 0 5px 0' : '12px 0 5px 0'};
 `;
 
-
 export const Line = styled.div`
   height: 1px;
-  width: 75%;
-  margin: ${props => props.isSection ? '45px 0' : '15px 0'};
+  width: ${props => props.isHeader ? '420px': '80%'};
+  margin-left: ${props => props.pullLeft ? '30px' : '0'};
   background-color: rgba(225, 225, 225, .2);
+  background-color:  ${props => props.isHeader ? 'rgba(225, 225, 225, .2)' : 'rgba(225, 225, 225, .2)'};
+  margin-bottom: ${props => props.isHeader ? '5px': 'unset'};
+  ${media.lessThan('468px')`
+    width: 95%;
+  `}
 `;

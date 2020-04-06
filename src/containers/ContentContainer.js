@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import inobounce from 'inobounce';
 import Loader from '../components/Loader/Loader';
 import About from '../components/About/About';
-import Media from '../components/Media/Media';
+import Projects from '../components/Projects/Projects';
 import Overlay from '../components/Overlay/Overlay';
 import Experience from '../components/Experience/Experience';
-import { EXPERIENCE_DATA, ABOUT_DATA } from '../constants';
+import { EXPERIENCE_DATA, PROJECT_DATA, ABOUT_DATA } from '../data';
 import ready from 'document-ready-promise';
 
 class ContentContainer extends Component {
@@ -20,14 +20,14 @@ class ContentContainer extends Component {
       Component: null,
       tabSelected,
       isOverlayAnimating,
-      mediaSelected: 'project',
       isDomContentLoaded: false,
     }
   }
   static defaultProps = {
     about: ABOUT_DATA,
+    projects: PROJECT_DATA,
     experience: EXPERIENCE_DATA,
-    components: { About, Experience, Media },
+    components: { About, Experience, Projects },
   }
   componentDidMount() {
     ready().then(() => {
@@ -48,16 +48,12 @@ class ContentContainer extends Component {
     if (!this.props.tabSelected) { return null };
     return this.props.components[this.props.tabSelected.componentName];
   }
-  onToggleMedia = () => {
-    const mediaSelected = this.state.mediaSelected === 'project' ? 'job' : 'project';
-    this.setState({ mediaSelected });
-  }
   transform = Component => {
-    if (Component === Media) {
+    if (Component === Projects) {
       return (
         <Component
-          onToggleMedia={this.onToggleMedia}
-          mediaSelected={this.state.mediaSelected}
+          data={this.props.projects}
+          onCloseOverlay={this.props.onCloseOverlay}        
         />
       )
     } else if (Component === Experience) {

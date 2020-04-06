@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { APP_MAX_WIDTH } from '../../constants';
+import { APP_MAX_WIDTH } from '../../data';
 
 const navHeight = '80px';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ORANGE_PRIMARY } from '../../../constants';
+import { ORANGE_PRIMARY } from '../../../data';
 
 export const Container = styled.article`
   position: relative;

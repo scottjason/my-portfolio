@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import windowSize from 'react-window-size';
-import { Container, Inner, ScrollView } from './Overlay.style';
+import {
+  Inner,
+  Container,
+  ScrollView
+} from './Overlay.style';
 
 class Overlay extends React.Component {
   constructor(props) {

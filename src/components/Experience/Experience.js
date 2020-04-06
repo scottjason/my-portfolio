@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import Job from './Job/Job';
 import Icon from '../Icon/Icon';
 import { Close } from 'styled-icons/material';
-import { Container, HeaderContainer, JobSeparator, Header, Line } from './Experience.style';
+import {
+  Line,
+  Header,
+  Container,
+  JobSeparator,
+  HeaderContainer,
+} from './Experience.style';
 
 const Experience = props => {
   const { data, onCloseOverlay } = props;

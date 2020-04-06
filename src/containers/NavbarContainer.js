@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Navbar from '../components/Navbar/Navbar';
-import { SOCIAL_DATA, NAVBAR_DATA } from '../constants';
+import { SOCIAL_DATA, NAVBAR_DATA } from '../data';
 
 class NavbarContainer extends Component {
   static defaultProps = {

@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Bar } from './Hamburger.style';
 
-const Hamburger = ({ onToggleMobileNav, isMobileNavInView, isOverlayInView, shouldRenderBackdrop }) => {
+const Hamburger = ({
+  onToggleMobileNav,
+  isMobileNavInView,
+  isOverlayInView,
+  shouldRenderBackdrop
+}) => {
   return(
     <Container onClick={onToggleMobileNav}>
       <Bar isOpen={shouldRenderBackdrop} />

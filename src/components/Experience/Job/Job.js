@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Header, Subtext, Role, Description, Span } from './Job.style';
+import {
+  Span,
+  Role,
+  Header,
+  Subtext,
+  Container,
+  Description,
+} from './Job.style';
 
 const Job = ({ job }) => {
   const openLink = url => window.open(url, '_blank');

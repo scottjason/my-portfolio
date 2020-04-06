@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, applyStyle, ContainerAnimation } from './Icon.style';
+import {
+  Container,
+  applyStyle,
+  ContainerAnimation
+} from './Icon.style';
 
 const Icon = ({ type, Component, onClickIcon }) => {
   const StyledIcon = applyStyle(Component, type);

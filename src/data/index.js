@@ -2,13 +2,6 @@ import { Github, Linkedin } from 'styled-icons/boxicons-logos';
 import { Angellist } from 'styled-icons/fa-brands';
 import { Mail } from 'styled-icons/feather';
 
-
-/** 
-*
-* Shared
-*
-*/
-
 /* Links */
 const RESUME_URL = 'https://sj-portfolio.s3-us-west-1.amazonaws.com/Scott+Jason+Resume+2020b.pdf';
 const CONTACT_URL = 'mailto:scottleejason@gmail.com?subject=Hi Scott, reaching out from your portfolio site';
@@ -50,11 +43,10 @@ export const BREAKPOINT_SIZES = {
 export const NAVBAR_DATA = [
   { displayName: 'about', method: 'onClickTab', componentName: 'About'},
   { displayName: 'experience', method: 'onClickTab', componentName: 'Experience'},
-  { displayName: 'media', method: 'onClickTab', componentName: 'Media'},
+  { displayName: 'projects', method: 'onClickTab', componentName: 'Projects'},
   { displayName: 'resume', method: 'openLink', url: RESUME_URL},
   { displayName: 'contact', method: 'openLink', url: CONTACT_URL},
 ];
-
 
 /** 
 *
@@ -79,7 +71,6 @@ export const LANDING_DATA = {
     mobileSubtext: 'my name is scott jason',
   }
 };
-
 
 /** 
 *
@@ -109,7 +100,6 @@ export const SOCIAL_DATA = [
     url: CONTACT_URL,
   },
 ];
-
 
 /** 
 *
@@ -255,7 +245,7 @@ const about = {
       links: ['https://hackernoon.com/understanding-functional-programming-with-javascript-41eb3fa8c2a'],
     },
     {
-      text: 'Fast-forward to 2019 and I have four plus years of professional experience- I\'m a product and design-oriented senior frontend engineer and have worked on everything from intelligent mirrors to grocery delivery apps and throughout all this I\'ve developed a whole new passion for all things frontend.',
+      text: 'Fast-forward to 2020 and I have five plus years of professional experience- I\'m a product and design-oriented senior frontend engineer and have worked on everything from intelligent mirrors to grocery delivery apps and throughout all this I\'ve developed a whole new passion for all things frontend.',
       highlightByString: ['all things frontend.'],
       highlightByIdx: [],
       links: ['//reactjs.org/'],
@@ -269,22 +259,20 @@ const about = {
   ],
 };
 
-
 /** 
 *
 * Projects
 *
 */
-
 export const PROJECT_DATA = [
-  {
-    name: 'Portoflio Site',
-    subtext: 'my portoflio site',
-    stack: 'React, ES6, Styled Components',
-    website: 'https://www.scottleejason.com',
-    repo: 'https://www.github.com/scottjason/portoflio',
-    deployed: 'January, 2019',
-    description: [],
+ {
+    projectName: 'Real-time Search',
+    projectUrl: 'https://react-real-time-search.herokuapp.com/',
+    sourceCodeUrl: 'https://github.com/scottjason/real-time-search',
+    description: [
+      'Real-time Search is a project app built with React that fetches images and image details from the Unsplash api and renders a responsive card grid. The search input field fetches and renders results as the user is typing, slightly debounced to prevent excessive calls.',
+      'The app contains its own cache logic to prevent requests that have already been made for a given term or partial term. Analytics of roundtrip request time and request type - api or cache fetch - at top right.',
+    ]
   },
 ];
 

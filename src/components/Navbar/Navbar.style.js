@@ -2,7 +2,11 @@ import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 import { isMobile } from 'react-device-detect';
 import { Gradient } from '../../App.style';
-import { ORANGE_PRIMARY, APP_MAX_WIDTH, BREAKPOINT_SIZES } from '../../constants';
+import {
+  ORANGE_PRIMARY,
+  APP_MAX_WIDTH,
+  BREAKPOINT_SIZES
+} from '../../data';
 
 const { portrait } = BREAKPOINT_SIZES;
 

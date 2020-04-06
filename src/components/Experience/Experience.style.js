@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { ORANGE_PRIMARY } from '../../constants';
+import { ORANGE_PRIMARY } from '../../data';
 
 export const Container = styled.div`
   display: flex;
