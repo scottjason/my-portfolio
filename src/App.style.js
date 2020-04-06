@@ -1,6 +1,6 @@
 import reset from 'styled-reset';
 import styled, { createGlobalStyle } from 'styled-components';
-import { ORANGE_PRIMARY } from './constants';
+import { ORANGE_PRIMARY } from './data';
 
 const GlobalStyles = createGlobalStyle`
   ${reset}

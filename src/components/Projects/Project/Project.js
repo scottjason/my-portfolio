@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import searchImgUrl from '../../../assets/images/search-sunrise-sm.jpg'
 
@@ -15,6 +15,7 @@ import {
 const Project = ({ project }) => {
   const { projectName, projectUrl, sourceCodeUrl, description } = project;
   const lastIdx = description.length - 1;
+  const onClickProjectImg = projectUrl => window.open(projectUrl, '_blank');
   return(
     <Container>
       <Header>{projectName}</Header>
@@ -25,10 +26,15 @@ const Project = ({ project }) => {
       </OptWrap>
       {project.description.map((description, idx) => {
         return (
-          <article>
+          <Fragment>
             <Description key={idx}>{description}</Description>
-            {idx === lastIdx && <ProjectImg src={searchImgUrl}/>}
-          </article>
+            {idx === lastIdx &&
+              <ProjectImg
+                src={searchImgUrl}
+                onClick={() => onClickProjectImg(projectUrl)}
+              />
+            }
+          </Fragment>
         )
       })}
     </Container>

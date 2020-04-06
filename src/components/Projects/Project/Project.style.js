@@ -10,7 +10,7 @@ export const Container = styled.article`
   line-height: 1.2rem;
   color: white;
   letter-spacing: 1px;
-  max-width: 90%;
+  max-width: 70%;
   &:last-child {
     padding-bottom: 25px;
   }
@@ -52,14 +52,16 @@ export const Break = styled.div`
 export const Description = styled.p`
   position: relative;
   padding: 0;
-  line-height: 1.3rem;
+  line-height: 1.2rem;
   font-size: 16px;
-  margin: ${props => props.key === 0 ? '12px 0 5px 0' : '12px 0 5px 0'};
+  margin: ${props => props.key === 0 ? '10px 0 5px 0' : '10px 0 5px 0'};
 `;
 
 export const ProjectImg = styled.img`
   max-width: 600px;
   min-width: 280px;
   width: 100%;
-  border: 1px solid white;
+  margin-top: 16px;
+  border: 1px solid rgba(225, 225, 225, 0.7);
+  cursor: pointer;
 `

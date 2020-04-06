@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { OVERLAY_ANIMATION_TIME, SWITCH_ANIMATION_TIME } from '../constants';
+import { OVERLAY_ANIMATION_TIME, SWITCH_ANIMATION_TIME } from '../data';
 import { debounce } from 'throttle-debounce';
 import inobounce from 'inobounce';
 

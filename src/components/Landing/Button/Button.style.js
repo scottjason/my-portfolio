@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { ORANGE_PRIMARY, BREAKPOINT_SIZES } from '../../../constants';
+import { ORANGE_PRIMARY, BREAKPOINT_SIZES } from '../../../data';
 const { portrait } = BREAKPOINT_SIZES;
 
 export const Btn = styled.button`

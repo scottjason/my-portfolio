@@ -10,7 +10,7 @@ export const Container = styled.article`
   line-height: 1.2rem;
   color: white;
   letter-spacing: 1px;
-  max-width: 90%;
+  max-width: 70%;
   &:last-child {
     padding-bottom: 25px;
   }

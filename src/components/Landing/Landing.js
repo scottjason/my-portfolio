@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header/Header';
 import Button from './Button/Button';
 import { Container, Inner, Img } from './Landing.style';
-import { LANDING_DATA } from '../../constants';
+import { LANDING_DATA } from '../../data';
 import imageSrc from '../../assets/images/background-img.jpg';
 import withBounce from '../../containers/withBounce';
 import withAnimation from '../../containers/withAnimation';

@@ -43,7 +43,7 @@ export const Header = styled.p`
 
 export const Line = styled.div`
   height: 1px;
-  width: ${props => props.isHeader ? '420px': '80%'};
+  width: ${props => props.isHeader ? '420px': '70%'};
   margin-left: ${props => props.pullLeft ? '30px' : '0'};
   background-color: rgba(225, 225, 225, .2);
   background-color:  ${props => props.isHeader ? 'rgba(225, 225, 225, .2)' : 'rgba(225, 225, 225, .2)'};
@@ -55,7 +55,7 @@ export const Line = styled.div`
 
 export const JobSeparator = styled(Line)`
   height: 1px;
-  width: 80%;
+  width: 70%;
   background-color: rgba(225, 225, 225, .2);
   margin: 10px 0 10px 0;
 `;
