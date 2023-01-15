@@ -7,18 +7,19 @@ export const Btn = styled.button`
   position: absolute;
   display: flex;
   padding: 17px;
+  align-items: center;
   background-color: black;
   color: white;
   border: 1px solid #fd845c;
   font-weight: 300;
   border-radius: 5px;
   bottom: -80px;
-  right: -45px;
+  // right: -45px;
   outline-color: transparent;
   outline-style: none;
   cursor: pointer;
   min-width: 250px;
-  color: rgba(225, 225, 225, .95);
+  color: rgba(225, 225, 225, 0.95);
   transition: all 150ms ease-in-out;
   ${media.lessThan(portrait.medium)`
     width: 70%;

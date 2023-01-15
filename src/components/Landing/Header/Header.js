@@ -1,21 +1,26 @@
 import React from 'react';
-import { Container, Highlight, H, HM, P } from './Header.style';
+import { Container, Highlight, H, HM, P, Line } from './Header.style';
 
 const Header = props => {
-  const { 
+  const {
     text,
     mobileText,
     mobileSubtext,
-    subtext: { preHighlight, postHighlight, highlighted } 
+    subtext: { preHighlight, postHighlight, highlighted },
   } = props;
-  return(
+  return (
     <Container>
       <H>{text}</H>
+      <Line />
       <HM>{mobileText}</HM>
       <HM>{mobileSubtext}</HM>
-      <P>{preHighlight}<Highlight>{highlighted}</Highlight>{postHighlight}</P>
+      <P>
+        {preHighlight}
+        <Highlight>{highlighted}</Highlight>
+        {postHighlight}
+      </P>
     </Container>
-  )
+  );
 };
 
 export default Header;

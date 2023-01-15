@@ -5,11 +5,11 @@ import Social from './Social/Social';
 import Dropdown from './Dropdown/Dropdown';
 import Hamburger from './Hamburger/Hamburger';
 import { ChevronRight } from 'styled-icons/feather';
-import { 
+import {
   Logo,
   Line,
   Inner,
-  NavTabs, 
+  NavTabs,
   NavItem,
   Container,
   ContainerMobile,
@@ -17,19 +17,26 @@ import {
   LogoMobile,
   SectionTop,
   SubtextMobile,
-  SectionBottom, 
+  SectionBottom,
 } from './Navbar.style';
 
 const Navbar = props => {
-  const { tabs, social, openLink } = props;
+  let { tabs, social, openLink } = props;
+  // temporarily disable projects view
+  tabs = tabs.filter(t => t.displayName !== 'projects');
+  console.log(tabs);
   const renderIcon = i => i !== tabs.length - 1;
   const renderNavbarDesktop = props => {
     return (
       <Container>
-         <Inner>
+        <Inner>
           <SectionTop>
-            <Logo>scott jason<Highlight>{' / '}</Highlight>portfolio</Logo>
-            <Logo>san francisco<Highlight>{' / '}</Highlight>remote</Logo>
+            <Logo>
+              scott jason<Highlight>{' / '}</Highlight>portfolio
+            </Logo>
+            <Logo>
+              san francisco<Highlight>{' / '}</Highlight>remote
+            </Logo>
             <Line lighten={true} />
           </SectionTop>
           <SectionBottom>
@@ -37,70 +44,59 @@ const Navbar = props => {
               {tabs.map((tab, i) => {
                 return (
                   <Fragment key={i}>
-                    <NavItem
-                      isActive={tab.isActive}
-                      onClick={() => props[tab.method](tab)}>{tab.displayName}
+                    <NavItem isActive={tab.isActive} onClick={() => props[tab.method](tab)}>
+                      {tab.displayName}
                     </NavItem>
-                    {renderIcon(i) && 
-                      <Icon
-                        type={'rightArrow'}
-                        Component={ChevronRight}
-                      />
-                    }
+                    {renderIcon(i) && <Icon type={'rightArrow'} Component={ChevronRight} />}
                   </Fragment>
-                )
+                );
               })}
             </NavTabs>
-            <Social
-              icons={social}
-              openLink={openLink}
-            >
-            </Social>
+            <Social icons={social} openLink={openLink}></Social>
           </SectionBottom>
           <Line />
-         </Inner>
+        </Inner>
       </Container>
-    ) 
-  }
+    );
+  };
 
   const renderNavbarMobile = props => {
-    const { onToggleMobileNav, isMobileNavInView, isMobileNavAnimating, isOverlayInView, shouldRenderBackdrop } = props;
+    const {
+      onToggleMobileNav,
+      isMobileNavInView,
+      isMobileNavAnimating,
+      isOverlayInView,
+      shouldRenderBackdrop,
+    } = props;
     return (
       <ContainerMobile>
         <Dropdown {...props} />
         <Inner isMobile={true}>
-          
           <SectionTop isMobile={true}>
             <LogoMobile>scott jason</LogoMobile>
             <SubtextMobile>software engineer</SubtextMobile>
           </SectionTop>
-          
+
           <Hamburger
             shouldRenderBackdrop={shouldRenderBackdrop}
             isOverlayInView={isOverlayInView}
             isMobileNavInView={isMobileNavAnimating || isMobileNavInView}
             onToggleMobileNav={onToggleMobileNav}
           />
-        
-          <Social
-            type={'socialMobile'}
-            icons={social}
-            openLink={openLink}
-          >
-          </Social>
-        
+
+          <Social type={'socialMobile'} icons={social} openLink={openLink}></Social>
         </Inner>
       </ContainerMobile>
-    ) 
-  }
-  
+    );
+  };
+
   return (
     <Fragment>
-     {renderNavbarMobile(props)}
-     {renderNavbarDesktop(props)}
+      {renderNavbarMobile(props)}
+      {renderNavbarDesktop(props)}
     </Fragment>
-  )
-}
+  );
+};
 
 Navbar.propTypes = {
   tabs: PropTypes.array.isRequired,
