@@ -3,28 +3,17 @@ import PropTypes from 'prop-types';
 import Job from './Job/Job';
 import Icon from '../Icon/Icon';
 import { Close } from 'styled-icons/material';
-import {
-  Line,
-  Header,
-  Container,
-  JobSeparator,
-  HeaderContainer,
-} from './Experience.style';
+import { Line, Header, Container, JobSeparator, HeaderContainer } from './Experience.style';
 
 const Experience = props => {
   const { data, onCloseOverlay } = props;
   const shouldRenderLine = i => i !== props.data.length - 1;
-  return(
+  return (
     <Container>
       <HeaderContainer>
-       <Header>professional experience</Header>
-        <Icon
-          onClickIcon={onCloseOverlay}
-          type={'close'}
-          Component={Close}
-        >
-        </Icon>
-     </HeaderContainer>
+        <Header>professional experience</Header>
+        <Icon onClickIcon={onCloseOverlay} type={'close'} Component={Close}></Icon>
+      </HeaderContainer>
       <Line isHeader={true} />
       {data.map((job, i) => {
         return (
@@ -32,12 +21,11 @@ const Experience = props => {
             <Job job={job} />
             {shouldRenderLine(i) && <JobSeparator />}
           </Fragment>
-        )
-      })
-    }
+        );
+      })}
     </Container>
-  )
-}
+  );
+};
 
 Experience.propTypes = {
   data: PropTypes.array.isRequired,

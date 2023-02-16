@@ -33,7 +33,7 @@ export const Header = styled.p`
   padding: 0;
   margin: 0;
   line-height: 1.1em;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   font-size: 21px;
   white-space: nowrap;
   color: ${ORANGE_PRIMARY};
@@ -47,7 +47,7 @@ export const Text = styled.p`
   position: relative;
   padding: 0;
   line-height: 1.3rem;
-  font-size: ${props => props.isFirst ? '18px;' : '16px;'};
+  font-size: ${props => (props.isFirst ? '18px;' : '16px;')};
   margin: 12px 0 5px 0;
   max-width: 90%;
 `;
@@ -58,8 +58,8 @@ export const BlueHighlight = styled.p`
   line-height: 2rem;
   font-size: 24px;
   max-width: 850px;
-  color: #5DB7F2;
-  color: #9AD1F5;
+  color: #5db7f2;
+  color: #9ad1f5;
   font-weight: 400;
   margin: 5px 0 5px 0;
   ${media.lessThan('768px')`
@@ -70,7 +70,7 @@ export const BlueHighlight = styled.p`
 `;
 
 export const Highlight = styled.a`
-  color: ${props => props.isBlue ? '#CDE5F5' : '#FD845C' };
+  color: ${props => (props.isBlue ? '#CDE5F5' : '#FD845C')};
   text-decoration: none;
   outline: none;
   cursor: pointer;
@@ -78,13 +78,13 @@ export const Highlight = styled.a`
 
 export const Line = styled.div`
   height: 1px;
-  margin: ${props => props.isHeader ? '0px 20px 20px 0' : '25px 0 20px 0'};
-  width: ${props => props.isHeader ? '420px': '80%'};
-  margin-left: ${props => props.pullLeft ? '30px' : '0'};
-  background-color: rgba(225, 225, 225, .2);
+  margin: ${props => (props.isHeader ? '0px 20px 20px 0' : '20px 0 15px 0')};
+  width: ${props => (props.isHeader ? '420px' : '80%')};
+  margin-left: ${props => (props.pullLeft ? '30px' : '0')};
+  background-color: rgba(225, 225, 225, 0.2);
   ${media.lessThan('768px')`
-    width: ${props => props.isHeader ? '90%': '90%'};
-    max-width: ${props => props.isHeader ? '400px': 'none'};
+    width: ${props => (props.isHeader ? '90%' : '90%')};
+    max-width: ${props => (props.isHeader ? '400px' : 'none')};
     text-align: left;
   `}
 `;

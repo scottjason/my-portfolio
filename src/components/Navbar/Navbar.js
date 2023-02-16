@@ -24,7 +24,6 @@ const Navbar = props => {
   let { tabs, social, openLink } = props;
   // temporarily disable projects view
   tabs = tabs.filter(t => t.displayName !== 'projects');
-  console.log(tabs);
   const renderIcon = i => i !== tabs.length - 1;
   const renderNavbarDesktop = props => {
     return (

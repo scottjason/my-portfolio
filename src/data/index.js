@@ -104,17 +104,38 @@ export const SOCIAL_DATA = [
 
 export const EXPERIENCE_DATA = [
   {
-    company: 'Gap',
+    company: 'Gap Inc.',
     location: 'San Francisco, CA',
     website: 'https://www.gap.com',
     slogan: "For every generation there's a Gap",
-    role: 'Senior Software Engineer, Frontend Focus',
+    role: 'Senior Software Engineer',
     startedAt: 'February 2019',
-    endedAt: 'Present',
-    stack: 'React, Redux, Node, Jest, Enzyme, Testcafe, Jenkins, Pivotal Cloud Foundry',
+    endedAt: 'October 2021',
+    stack: 'React, Redux, Node, Testcafe, Playwright, Typescript, Jenkins, Azure',
     description: [
-      'Helping the effort in Gap’s transition to micro frontends built with React, Redux and Node as well as a new, more polished looking UI/UX. I work on the architecture of both React and Node as well as build features and perform code reviews. I also build Jenkins pipelines and work with PCF.',
-      'Write unit, integration and end to end tests that run in a Jenkins CI/CD pipeline and coordinate with multiple teams as well as help drive the effort in managing tasks and completing sprints in an Agile Environment.',
+      'Helping the effort in Gap’s transition to micro frontends built with React, Redux and Node as well as a new, more polished UI/UX. I work on the architecture of both React and Node as well as build features and perform code reviews. I also build Jenkins pipelines and work with Azure.',
+      'Write unit, integration and end to end tests that run in a Jenkins CI/CD pipeline and coordinate with multiple teams as well as help drive the effort in managing tasks and completing sprints in an Agile environment.',
+    ],
+    promotions: [
+      {
+        role: 'Staff Software Engineer, Technical Lead',
+        startedAt: 'January 2022',
+        endedAt: 'Present',
+        description: [
+          'Technical Lead of a team of ~20 Software Engineers working in squads on parallel efforts.',
+          'I work with Engineering, Architecture, Infosec, Product and Design teams and help map the scope of projects and break down tasks to simplify large epics.',
+          'I interview and mentor developers and help layout the foundation for large features. I also perform code reviews as well as handle and teach release management.',
+          'I help lead the development for Gap’s new authentication-related features and work within the critical buy path.',
+        ],
+      },
+      {
+        role: 'Staff Software Engineer',
+        startedAt: 'October 2021',
+        endedAt: 'January 2022',
+        description: [
+          'Help lead large company initiatives with technical planning, sizing, architecture, scalable design patterns, testing and implementation.',
+        ],
+      },
     ],
   },
   {
@@ -246,7 +267,7 @@ const about = {
       ],
     },
     {
-      text: "Fast-forward to 2020 and I have five plus years of professional experience- I'm a product and design-oriented senior frontend engineer and have worked on everything from intelligent mirrors to grocery delivery apps and throughout all this I've developed a whole new passion for all things frontend.",
+      text: "Fast-forward to 2023 and I have almost ten years of professional experience. I'm a product and design-oriented senior software engineer and have worked on everything from intelligent mirrors to grocery delivery apps and throughout all this I've developed a whole new passion for all things frontend.",
       highlightByString: ['all things frontend.'],
       highlightByIdx: [],
       links: ['//reactjs.org/'],

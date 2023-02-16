@@ -2,11 +2,7 @@ import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 import { isMobile } from 'react-device-detect';
 import { Gradient } from '../../App.style';
-import {
-  ORANGE_PRIMARY,
-  APP_MAX_WIDTH,
-  BREAKPOINT_SIZES
-} from '../../data';
+import { ORANGE_PRIMARY, APP_MAX_WIDTH, BREAKPOINT_SIZES } from '../../data';
 
 const { portrait } = BREAKPOINT_SIZES;
 
@@ -20,7 +16,7 @@ export const Container = styled.nav`
   width: 100vw;
   min-width: 420px;
   z-index: 10;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   margin: 0 auto;
   overflow: hidden;
@@ -38,11 +34,11 @@ export const ContainerMobile = styled.nav`
   height: 80px;
   max-height: 80px;
   width: 100vw;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   margin: 0 auto;
   z-index: 10;
-  border-bottom: 1px solid rgba(225, 225, 225, .2);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.2);
   ${media.lessThan(portrait.medium)`
     display: flex;
     align-items: center;
@@ -59,17 +55,18 @@ export const Inner = styled.div`
   ${media.lessThan(portrait.medium)`
     text-align: left;
   `}
-  ${isMobile && css`
+  ${isMobile &&
+  css`
     padding-top: 10px;
   `};
 `;
 
 export const SectionTop = styled.section`
-  position: ${props => props.isMobile ? 'relative' : 'absolute'};
+  position: ${props => (props.isMobile ? 'relative' : 'absolute')};
   display: flex;
-  flex-direction: ${props => props.isMobile ? 'column' : 'row'};
+  flex-direction: ${props => (props.isMobile ? 'column' : 'row')};
   flex-shrink: 0;
-  justify-content: ${props => props.isMobile ? 'center' : 'space-between'};
+  justify-content: ${props => (props.isMobile ? 'center' : 'space-between')};
   max-width: 1440px;
   margin: 0 auto;
   left: 0;
@@ -80,9 +77,11 @@ export const SectionTop = styled.section`
   height: 30px;
   max-width: ${APP_MAX_WIDTH};
   transition: all 250ms ease-in-out;
-  ${props => props.isMobile && css`
-    padding-left: 22px;
- `}
+  ${props =>
+    props.isMobile &&
+    css`
+      padding-left: 22px;
+    `}
 `;
 
 export const SectionBottom = styled.section`
@@ -93,7 +92,7 @@ export const SectionBottom = styled.section`
   display: flex;
   align-items: center;
   max-width: 1440px;
-  bottom: 0;
+  bottom: 6px;
   width: 100%;
   height: 50%;
   max-width: ${APP_MAX_WIDTH};
@@ -112,13 +111,13 @@ export const NavTabs = styled.ul`
 
 export const NavItem = styled.li`
   display: flex;
-  color: ${props => props.isActive ? ORANGE_PRIMARY : 'rgba(225, 225, 225, 1)'};
+  color: ${props => (props.isActive ? ORANGE_PRIMARY : 'rgba(225, 225, 225, 1)')};
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.2rem;
   cursor: pointer;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   transition: all 150ms ease-in-out;
   text-transform: uppercase;
   &:hover {
@@ -131,10 +130,10 @@ export const Logo = styled(Gradient)`
   left: 30px;
   color: white;
   top: 12px;
-  font-size:16px;
+  font-size: 16px;
   line-height: 1.1rem;
   font-weight: 400;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   &:nth-child(2) {
     left: unset;
     right: 30px;
@@ -159,10 +158,13 @@ export const LogoMobile = styled.p`
     letter-spacing: 6px;
     text-transform: uppercase;
     color: ${ORANGE_PRIMARY};
-    ${isMobile && css`
-      margin-top: -10px;
-      letter-spacing: 5px;
-   `}
+    ${
+      isMobile &&
+      css`
+        margin-top: -10px;
+        letter-spacing: 5px;
+      `
+    }
   `}
 `;
 
@@ -185,7 +187,8 @@ export const Line = styled.div`
   width: 100%;
   height: 1px;
   max-width: 1440px;
-  background-color: ${props => props.lighten ? 'rgba(225, 225, 225, .2)' : 'rgba(225, 225, 225, .3)'};
+  background-color: ${props =>
+    props.lighten ? 'rgba(225, 225, 225, .2)' : 'rgba(225, 225, 225, .3)'};
 `;
 
 export const Highlight = styled.span`
