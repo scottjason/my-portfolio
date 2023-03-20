@@ -3,7 +3,7 @@ import { Angellist } from 'styled-icons/fa-brands';
 import { Mail } from 'styled-icons/feather';
 
 /* Links */
-const RESUME_URL = 'https://sj-portfolio.s3-us-west-1.amazonaws.com/Scott+Jason+Resume+2020b.pdf';
+const RESUME_URL = 'https://sj-portfolio.s3.us-west-1.amazonaws.com/scott-jason-resume-2023.pdf';
 const CONTACT_URL =
   'mailto:scottleejason@gmail.com?subject=Hi Scott, reaching out from your portfolio site';
 
