@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "http://scottleejason.com"
+  to = "https://scottleejason.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "scottleejason.com"
+  to = "https://scottleejason.com"
+  status = 301
+  force = true
