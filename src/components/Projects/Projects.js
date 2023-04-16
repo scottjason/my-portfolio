@@ -5,15 +5,6 @@ import Project from './Project/Project';
 
 import { Line, Header, Container, InnerWrap, HeaderContainer } from './Projects.style';
 
-/* Real-Time Search */
-// import searchBeachSmImg from '../../assets/images/search-beach-sm.jpg';
-
-// /* Oak Labs */
-// import associateImgOne from '../../assets/images/oak-associate-app-1.png';
-// import associateImgTwo from '../../assets/images/oak-associate-app-2.png';
-// import oakDashboardOne from '../../assets/images/oak-dashboard-1a.jpg';
-// import oakDashboardTwo from '../../assets/images/oak-dashboard-2a.jpg';
-
 const Projects = ({ data, onCloseOverlay }) => {
   return (
     <Container>

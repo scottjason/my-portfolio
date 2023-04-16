@@ -288,12 +288,36 @@ const about = {
  */
 export const PROJECT_DATA = [
   {
+    projectName: 'Full Stack Boilerplate with JWT Authentication, MongoDB',
+    createdAt: 'January 2022',
+    projectUrl: 'https://ts-boilerplate-graphql-mongodb-production.up.railway.app/',
+    sourceCodeUrl: 'https://github.com/scottjason/ts-boilerplate-graphql-mongodb',
+    description: [
+      'Full Stack boilerplate with JWT authentication using MongoDB for the database. Uses custom hooks and code splitting optimization via route-based component lazy loading with the Suspense component.',
+      'Unexpired tokens on sign-out are stored in a Mongo collection and checked against on all authentication attempts.',
+      'Built with React, Typescript, Node, Express, GraphQL, MongoDB, Mongoose, and Webpack.',
+    ],
+  },
+  {
+    projectName: 'Full Stack Boilerplate with JWT Authentication, PostgreSQL & Redis',
+    createdAt: 'May 2022',
+    projectUrl: 'https://ts-boilerplate-graphql-postgres-production.up.railway.app/',
+    sourceCodeUrl: 'https://github.com/scottjason/ts-boilerplate-graphql-postgres',
+    description: [
+      'Full Stack boilerplate with JWT authentication using PostgreSQL for the database and Redis for quick token queries. Uses custom hooks and code splitting optimization via route-based component lazy loading with the Suspense component',
+      'Unexpired tokens on sign-out are stored in a Redis list and checked against on all authentication attempts.',
+      'Built with React, Typescript, Node, Express, GraphQL, PostgreSQL, Redis, and Webpack.',
+    ],
+  },
+  {
     projectName: 'Real-time Search',
-    projectUrl: 'https://react-real-time-search.herokuapp.com/',
+    createdAt: 'November 2018',
+    projectUrl: 'https://react-real-time-search.netlify.app/',
     sourceCodeUrl: 'https://github.com/scottjason/real-time-search',
     description: [
       'Real-time Search is a project app built with React that fetches images and image details from the Unsplash api and renders a responsive card grid. The search input field fetches and renders results as the user is typing, slightly debounced to prevent excessive calls.',
       'The app contains its own cache logic to prevent requests that have already been made for a given term or partial term. Analytics of roundtrip request time and request type - api or cache fetch - at top right.',
+      'Built with React, es6, styled components',
     ],
   },
 ];
